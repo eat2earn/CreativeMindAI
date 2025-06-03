@@ -1,0 +1,11 @@
+.parallax-footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top, #2a1449, #1a082f);
+  }
+  
+  .parallax-layer {
+    transition: transform 0.2s ease-out;
+    pointer-events: none;
+  }
+  

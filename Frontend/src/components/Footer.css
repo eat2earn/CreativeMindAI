@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #AD0170;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: arial;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: url("#goo");
+    filter: url("#goo");
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    background: #1f2937;
+    /* bg-gray-800 */
+    color: #f3f4f6;
+    /* text-gray-100 */
+}
+
+footer,
+article {
+    font-family: monospace;
+    width: 100%;
+    color: black;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px #737373;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 20px;
+    margin-top: auto;
+}
+
+article {
+    width: 50%;
+    max-width: 350px;
+    font-size: 15px;
+    color: white;
+    padding: 20px;
+}
+
+svg {
+    display: none;
+}
+
+
+/* Responsive container */
+
+.footer-container {
+    max-width: 1280px;
+    /* max-w-7xl */
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* px-4 */
+}
+
+@media (min-width: 640px) {
+    .footer-container {
+        padding: 0 1.5rem;
+        /* sm:px-6 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        padding: 0 2rem;
+        /* lg:px-8 */
+    }
+}
+
+
+/* Social icons hover effect */
+
+.social-icon {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+
+/* App store buttons */
+
+.app-button {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.app-button:hover {
+    background-color: #6d28d9;
+    /* hover:bg-violet-800 */
+}
+
+
+/* Links hover effect */
+
+.footer-link {
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #a78bfa;
+    /* hover:text-violet-400 */
+}
+
+
+/* Responsive text sizes */
+
+@media (max-width: 640px) {
+    .footer-text {
+        font-size: 0.875rem;
+        /* text-sm */
+    }
+    .footer-heading {
+        font-size: 1.125rem;
+        /* text-lg */
+    }
+}
+
+main {
+    flex: 1;
+}

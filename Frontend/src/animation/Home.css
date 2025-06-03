@@ -1,0 +1,128 @@
+:root {
+  --max-logo-width: 800px;
+  --min-logo-width: 300px;
+}
+
+body {
+  margin: 0;
+  background-image: url(images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.title {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-logo-width);
+  min-width: var(--min-logo-width);
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.banner::before {
+  background-image: url('images/valentin-petrov-m-mal-01.jpg');
+  animation-name: bgZoomIn;
+}
+
+.banner::after {
+  background-image: url('images/after.png');
+  animation-name: bgZoomOut;
+}
+
+@keyframes bgZoomIn {
+  from { transform: scale(1.25); }
+  to { transform: scale(1); }
+}
+
+@keyframes bgZoomOut {
+  from { transform: scale(1); }
+  to { transform: scale(1.8); }
+}
+
+svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: textAnimation 4s ease-in-out forwards;
+}
+
+@keyframes textAnimation {
+  0% { stroke-dashoffset: 1000; }
+  80% { fill: transparent; }
+  100% { fill: #fff; stroke-dashoffset: 0; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --max-logo-width: 600px;
+  }
+
+  svg path {
+    stroke-width: 0.8;
+  }
+
+  @keyframes bgZoomOut {
+    to { transform: scale(1.6); }
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --max-logo-width: 90vw;
+    --min-logo-width: 250px;
+  }
+
+  .title {
+    height: 40vh;
+  }
+
+  svg path {
+    stroke-width: 0.6;
+  }
+
+  @keyframes bgZoomOut {
+    to { transform: scale(1.4); }
+  }
+}
+
+@media (orientation: landscape) {
+  .title {
+    height: 80vh;
+  }
+}

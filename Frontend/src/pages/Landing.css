@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    background-image: url(images/bg.jpg);
+  }
+  
+  .banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/valentin-petrov-m-mal-01.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: bgZoomIn 4s ease-in-out 1 forwards;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/after.png');
+    background-size: cover;
+    background-position: top;
+    transform: scale(2);
+    animation: bgZoomOut 4s ease-in-out 1 forwards;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  @keyframes bgZoomIn {
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bgZoomOut {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2);
+    }
+  }
+  
+  svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textAnimation 4s ease-in-out 1 forwards;
+  }
+  
+  @keyframes textAnimation {
+    0% {
+      stroke-dashoffset: 50;
+    }
+    80% {
+      fill: transparent;
+    }
+    100% {
+      fill: #fff;
+      stroke-dashoffset: 0;
+    }
+  }
+  /* Add these styles to your existing Home.css */
+
+.account-button-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: fadeInUp 1s ease-out 3.5s both; /* Matches text animation timing */
+  opacity: 0;
+}
+
+.create-account-button {
+  padding: 1rem 2.5rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.create-account-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.create-account-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+              0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.create-account-button:hover::before {
+  left: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Add glow effect to match your SVG animation */
+.create-account-button:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff2770, #45f3ff, #ff2770);
+  background-size: 200%;
+  z-index: -1;
+  border-radius: 50px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.create-account-button:hover:after {
+  opacity: 1;
+  animation: glowing 2s linear infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.title svg {
+    width: clamp(240px, 50vw, 360px);
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .account-button-container {
+        bottom: 30px;
+    }
+    
+    .create-account-button {
+        padding: 0.8rem 2rem;
+    }
+}

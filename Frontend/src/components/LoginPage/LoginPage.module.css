@@ -1,0 +1,87 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    box-sizing: border-box;
+    height: 400px;
+    width: 300px;
+    padding: 150px 50px 0px 50px;
+    margin-top: 220px;
+    z-index: 2;
+    border-radius: 50px;
+    box-shadow: 0px 24px 24px #d9d9d9;
+    background-color: white;
+}
+
+.label {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 10px 12px 37px;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+    background-repeat: no-repeat;
+    background-position: 6px;
+}
+
+.input#username {
+    background-size: 9%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='48'%3E%3Cpath d='M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z'/%3E%3C/svg%3E");
+}
+
+.input#password {
+    background-size: 7%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iX3gzMV9feDJDXzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xOC43NSAyNGgtMTMuNWMtMS4yNCAwLTIuMjUtMS4wMDktMi4yNS0yLjI1di0xMC41YzAtMS4yNDEgMS4wMS0yLjI1IDIuMjUtMi4yNWgxMy41YzEuMjQgMCAyLjI1IDEuMDA5IDIuMjUgMi4yNXYxMC41YzAgMS4yNDEtMS4wMSAyLjI1LTIuMjUgMi4yNXptLTEzLjUtMTMuNWMtLjQxMyAwLS43NS4zMzYtLjc1Ljc1djEwLjVjMCAuNDE0LjMzNy43NS43NS43NWgxMy41Yy40MTMgMCAuNzUtLjMzNi43NS0uNzV2LTEwLjVjMC0uNDE0LS4zMzctLjc1LS43NS0uNzV6Ii8+PHBhdGggZD0ibTE3LjI1IDEwLjVjLS40MTQgMC0uNzUtLjMzNi0uNzUtLjc1di0zLjc1YzAtMi40ODEtMi4wMTktNC41LTQuNS00LjVzLTQuNSAyLjAxOS00LjUgNC41djMuNzVjMCAuNDE0LS4zMzYuNzUtLjc1Ljc1cy0uNzUtLjMzNi0uNzUtLjc1di0zLjc1YzAtMy4zMDkgMi42OTEtNiA2LTZzNiAyLjY5MSA2IDZ2My43NWMwIC40MTQtLjMzNi43NS0uNzUuNzV6Ii8+PHBhdGggZD0ibTEyIDE3Yy0xLjEwMyAwLTItLjg5Ny0yLTJzLjg5Ny0yIDItMiAyIC44OTcgMiAyLS44OTcgMi0yIDJ6bTAtMi41Yy0uMjc1IDAtLjUuMjI0LS41LjVzLjIyNS41LjUuNS41LS4yMjQuNS0uNS0uMjI1LS41LS41LS41eiIvPjxwYXRoIGQ9Im0xMiAyMGMtLjQxNCAwLS43NS0uMzM2LS43NS0uNzV2LTIuNzVjMC0uNDE0LjMzNi0uNzUuNzUtLjc1cy43NS4zMzYuNzUuNzV2Mi43NWMwIC40MTQtLjMzNi43NS0uNzUuNzV6Ii8+PC9zdmc+");
+}
+
+.input:focus {
+    border-bottom-color: #555;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 280px;
+        padding: 120px 30px 0px 30px;
+        margin-top: 180px;
+    }
+    .input {
+        padding: 10px 10px 10px 35px;
+        font-size: 13px;
+    }
+    .label {
+        font-size: 13px;
+    }
+}
