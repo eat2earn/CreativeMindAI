@@ -28,8 +28,12 @@ app.use('/api/user', userRouter)
 app.use('/api/image', imageRouter)
 app.use("/api/chatbot", chatbotRoutes);
 app.use("/api/tts", textToSpeechRoutes);
+
 app.get('/', (req, res) => {
-    res.send('API Working')
+    res.send({
+        activeStatus:true,
+        error:false,
+})
 });
 
 // Error handling middleware
