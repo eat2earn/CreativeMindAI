@@ -23,6 +23,7 @@ import star_group from './star_group.png'
 import credit_star from './credit_star.svg'
 import profile_icon from './profile_icon.png'
 
+
 // Carousel Images
 import img1 from './image/img1.png';
 import img2 from './image/img2.jpg';
@@ -30,7 +31,7 @@ import img3 from './image/img3.jpg';
 import img4 from './image/img4.jpg';
 
 // team memeber images
-import Ashu from './ashu.jpg'
+import Ashu from './Ashu.jpg'
 import suraj from './suraj.jpg'
 import yuvraj from './yuvraj.jpg'
 import prakash from './prakash.jpg'

@@ -71,10 +71,10 @@ const Carousel = () => {
             <div className="content">
               <div className="author">CreativeMindAI</div>
               <div className="topic">Text to Image</div>
-              <div className="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, temporibus!</div>
+              <div className="des">Transform your imagination into stunning visuals with our advanced AI image generation. Create unique artwork from text descriptions in seconds!</div>
               <div className="buttons">
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
+                <button onClick={() => navigate('/app/result')}>TRY NOW</button>
+                <button onClick={() => navigate('/app/buy')}>SUBSCRIBE</button>
               </div>
             </div>
           </div>
@@ -83,10 +83,10 @@ const Carousel = () => {
             <div className="content">
               <div className="author">CreativeMindAI</div>
               <div className="topic">ThinkAI</div>
-              <div className="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, temporibus!</div>
+              <div className="des">Experience the power of AI-driven thinking. Get instant answers, creative solutions, and intelligent insights for any question or task!</div>
               <div className="buttons">
-              <button onClick={() => navigate('/creativeMindAI-thinkAI')}>SUBSCRIBE</button>
-                
+                <button onClick={() => navigate('/creativeMindAI-thinkAI')}>TRY NOW</button>
+                <button onClick={() => navigate('/app/buy')}>SUBSCRIBE</button>
               </div>
             </div>
           </div>
@@ -95,10 +95,10 @@ const Carousel = () => {
             <div className="content">
               <div className="author">CreativeMindAI</div>
               <div className="topic">Background Remover</div>
-              <div className="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, temporibus!</div>
+              <div className="des">Remove backgrounds from any image with perfect precision. Our AI-powered tool makes it easy to create professional-looking transparent backgrounds!</div>
               <div className="buttons">
-                <button>SEE MORE</button>
-                <button onClick={() => navigate('/app/remove-background')}>SUBSCRIBE</button>
+                <button onClick={() => navigate('/app/remove-background')}>TRY NOW</button>
+                <button onClick={() => navigate('/app/buy')}>SUBSCRIBE</button>
               </div>
             </div>
           </div>
@@ -106,11 +106,11 @@ const Carousel = () => {
             <img src={assets.img4} alt="Slide 4" />
             <div className="content">
               <div className="author">CreativeMindAI</div>
-              <div className="topic">Face Swap</div>
-              <div className="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, temporibus!</div>
+              <div className="topic">Text-to-Speech</div>
+              <div className="des">Convert your text into natural-sounding speech with multiple voice styles. Perfect for content creators, presentations, and accessibility needs!</div>
               <div className="buttons">
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
+                <button onClick={() => navigate('/tts')}>TRY NOW</button>
+                <button onClick={() => navigate('/app/buy')}>SUBSCRIBE</button>
               </div>
             </div>
           </div>

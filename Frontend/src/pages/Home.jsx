@@ -9,6 +9,7 @@ import TeamCarousel from '../components/TeamCarousel'
 const Home = () => {
   return (
     <div className="text-gray-800">
+    
       <Header />
       <Steps />
       <Description />

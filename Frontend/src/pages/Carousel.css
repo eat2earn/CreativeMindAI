@@ -64,10 +64,20 @@ header a{
     font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
-}
-.carousel .list .item .topic{
     color: #3aaef1;
 }
+
+.carousel .list .item .des {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 20px 0;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
 .carousel .list .item .buttons{
     display: grid;
     grid-template-columns: repeat(2, 130px);
@@ -297,10 +307,12 @@ header a{
     }
 }
 @media screen and (max-width: 678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
-    }
     .carousel .list .item .content {
+        padding-right: 0;
         font-size: 30px;
+    }
+    .carousel .list .item .des {
+        font-size: 1em;
+        line-height: 1.4;
     }
 }
