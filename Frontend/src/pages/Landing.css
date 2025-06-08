@@ -17,7 +17,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('images/valentin-petrov-m-mal-01.jpg');
+    background-image: url('images/bg.jpg');
     background-size: cover;
     background-position: center;
     animation: bgZoomIn 4s ease-in-out 1 forwards;
