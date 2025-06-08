@@ -31,9 +31,9 @@ app.use("/api/tts", textToSpeechRoutes);
 
 app.get('/', (req, res) => {
     res.send({
-        activeStatus:true,
-        error:false,
-})
+        activeStatus: true,
+        error: false,
+    })
 });
 
 // Error handling middleware
