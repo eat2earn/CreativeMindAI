@@ -306,13 +306,116 @@ header a{
         opacity: 0;
     }
 }
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 1024px) {
+    header, .carousel .list .item .content {
+        width: 95vw;
+        max-width: 100%;
+        padding-right: 10vw;
+    }
     .carousel .list .item .content {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2em;
+    }
+    .carousel .list .item .topic {
+        font-size: 3em;
+    }
+    .thumbnail .item {
+        width: 100px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0 10px;
+    }
+    .carousel {
+        width: 100vw;
+        height: 70vh;
+        margin-top: 0;
+    }
+    .carousel .list .item .content {
+        width: 90vw;
         padding-right: 0;
-        font-size: 30px;
+        top: 10%;
+        font-size: 1em;
+    }
+    .carousel .list .item .topic {
+        font-size: 2em;
+    }
+    .thumbnail {
+        bottom: 10px;
+        gap: 10px;
+    }
+    .thumbnail .item {
+        width: 60px;
+        height: 80px;
+    }
+    .arrows {
+        top: 90%;
+        right: 50%;
+        width: 120px;
+        max-width: 100%;
+        gap: 5px;
+    }
+    .arrows button {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 40px;
+        font-size: 0.9em;
+        padding: 0 5px;
+    }
+    .carousel {
+        height: 60vh;
+    }
+    .carousel .list .item .content {
+        width: 98vw;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5%;
+        font-size: 0.9em;
+        padding: 0 2vw;
+    }
+    .carousel .list .item .topic {
+        font-size: 1.2em;
+    }
+    .carousel .list .item .author {
+        font-size: 1em;
+        letter-spacing: 2px;
     }
     .carousel .list .item .des {
+        font-size: 0.9em;
+    }
+    .carousel .list .item .buttons {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 36px;
+        gap: 3px;
+    }
+    .thumbnail {
+        gap: 5px;
+    }
+    .thumbnail .item {
+        width: 40px;
+        height: 54px;
+    }
+    .arrows {
+        top: 95%;
+        right: 50%;
+        width: 80px;
+        gap: 2px;
+    }
+    .arrows button {
+        width: 24px;
+        height: 24px;
         font-size: 1em;
-        line-height: 1.4;
     }
 }
