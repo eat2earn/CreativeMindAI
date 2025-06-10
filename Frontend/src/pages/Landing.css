@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-size: 16px;
-    background-image: url(images/bg.jpg);
+    background: none;
   }
   
   .banner {
@@ -17,7 +17,11 @@ body {
     content: '';
     position: absolute;
     inset: 0;
+<<<<<<< HEAD
     background-image: url('images/moutain.jpg');
+=======
+    background-image: url('./src/assets/valentin-petrov-m-mal-01.jpg');
+>>>>>>> 985673a5c573a1150ec919adbb3f136a6c311c10
     background-size: cover;
     background-position: center;
     animation: bgZoomIn 4s ease-in-out 1 forwards;
@@ -29,7 +33,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('images/after.png');
+    background-image: url('./src/assets/after.png');
     background-size: cover;
     background-position: top;
     transform: scale(2);
